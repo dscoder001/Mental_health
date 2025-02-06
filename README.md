@@ -78,10 +78,15 @@ streamlit run mental_health_ui.py
 
 [Click here to watch a Full Demo](#) *([Video Link](https://drive.google.com/file/d/1HHkMh4fsvaDPVDGToHKjByCfs_yd1GTz/view?usp=sharing))*
 
-## Video Demonstration  
-Watch the demonstration video below:  
 
-[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](demoVid.mp4)
+
+
+```markdown
+<video width="640" height="360" controls>
+  <source src="demoVid.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+```
 
 ---
 
