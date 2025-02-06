@@ -20,21 +20,37 @@ This project predicts whether a person is likely to seek mental health treatment
 - **Dataset:** The dataset (`survey.csv`) contains responses from individuals regarding their mental health conditions and workplace factors.
 - **Preprocessing Steps:**
   1. Handled missing values.
-  2. Encoded categorical features (e.g., Gender, Work Interference, Benefits, etc.).
-  3. Normalized numerical features (e.g., Age).
-  4. Split data into training and testing sets (80/20 split).
+  2. Handling irrelevant data.
+  3. Encoded categorical features (e.g., Gender, Work Interference, Benefits, etc.).
+  4. Split data into training and testing sets (75/25 split).
 
 ---
 
 ## 🤖 Model Selection and Training
 
-- **Model Used:** A supervised learning classification model trained using **Logistic Regression** (or the actual model used if different).
-- **Rationale:** Chosen due to its interpretability, effectiveness on structured data, and ability to handle categorical variables efficiently.
+- **Model Used:** A supervised learning classification model trained using **XGBoost**.
+- **Rationale:** Chosen due to its high performance on tabular data, ability to handle missing values, and strong feature importance insights.
 - **Evaluation Metrics:**
-  - Accuracy: **X%**
-  - Precision: **X%**
-  - Recall: **X%**
-  - F1-score: **X%** (Replace with actual values after evaluation)
+  - Accuracy: **82.22%**
+  - Precision: **79.78%**
+  - Recall: **88.48%**
+  - F1-score: **83.91%**
+  - ROC-AUC: **87.09%**
+
+- **Best Hyperparameters:**
+  ```json
+  {
+    "max_depth": 7,
+    "learning_rate": 0.2,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "gamma": 0,
+    "objective": "binary:logistic",
+    "eval_metric": "logloss",
+    "seed": 42
+  }
+  ```
+  - **Best Number of Boosting Rounds:** 100
 
 ---
 
@@ -60,7 +76,12 @@ streamlit run mental_health_ui.py
 
 ## 🎥 Video Demonstration
 
-[Click here to watch a demo](#) *(Replace with actual video link after recording.)*
+[Click here to watch a Full Demo](#) *([Video Link](https://drive.google.com/file/d/1HHkMh4fsvaDPVDGToHKjByCfs_yd1GTz/view?usp=sharing))*
+
+## Video Demonstration  
+Watch the demonstration video below:  
+
+[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](demoVid.mp4)
 
 ---
 
@@ -77,6 +98,7 @@ pip install -r requirements.txt
 - Improve model accuracy with additional features.
 - Add explainability using SHAP values.
 - Enhance UI with interactive visualizations.
+
 
 ---
 
