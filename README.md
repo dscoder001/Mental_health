@@ -80,7 +80,7 @@ streamlit run mental_health_ui.py
 
 
 
-
+### User Interface
 ![User Interface](image.png)
 
 
