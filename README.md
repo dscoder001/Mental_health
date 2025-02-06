@@ -81,7 +81,7 @@ streamlit run mental_health_ui.py
 
 
 
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](demoVid.mp4)
+[User Interface](image.png)
 
 
 ---
